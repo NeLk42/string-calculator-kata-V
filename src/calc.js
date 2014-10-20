@@ -2,9 +2,21 @@ var calc = {
     getNumsArray: function (res) {
         return res.replace('\n', ',').split(',');
     },
+    throwNegativeError: function (array) {
+        var err = 'Negatives not allowed:'
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                err += ' ' + array[i]
+            }
+        }
+        throw new Error(err)
+    },
     calculateSum: function (array) {
         var res = 0
         for (var i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                this.throwNegativeError(array)
+            }
             res += parseInt(array[i])
         }
         return res
