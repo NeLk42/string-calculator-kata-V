@@ -30,6 +30,10 @@ describe('String calculator add() method', function () {
             calc.add('1,2,-21')
         }).toThrow(new Error('Negatives not allowed: -21'))
     })
+
+    it('should return 720 if string is 1080,720', function () {
+        expect(calc.add('1080,720')).toBe(720)
+    })
 })
 
 /*

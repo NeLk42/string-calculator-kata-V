@@ -17,7 +17,10 @@ var calc = {
             if (array[i] < 0) {
                 this.throwNegativeError(array)
             }
-            res += parseInt(array[i])
+            if (array[i] <= 1000) {
+                res += parseInt(array[i])
+            }
+
         }
         return res
     },
