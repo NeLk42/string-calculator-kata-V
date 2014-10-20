@@ -20,22 +20,11 @@ describe('String calculator add() method', function () {
     it('should return 10 if string is 1,2\n3,4', function () {
         expect(calc.add('1,2\n3,4')).toBe(10)
     })
+
 })
 
 /*
- 1. Create a String calculator with a method int Add(string numbers)
- a. The method can take 0, 1, or 2 numbers and will return their sum.
- b. An empty string will return 0.
- c. Example inputs: “”, “1”, or “1,2”
- d. Start with the simplest test case of an empty string. Then 1 number. Then 2 numbers.
- e. Remember to solve things as simply as possible, forcing yourself to write tests for things you
- didn’t think about.
- f. Remember to refactor after each passing test.
- 2. Allow the Add method to handle an unknown number of arguments/numbers.
- 3. Allow the Add method to handle new lines between numbers (instead of commas).
- a. Example: “1\n2,3” should return 6.
- b. Example: “1,\n” is invalid, but you don’t need a test for this case.
- c. Only test correct inputs – there is no need to deal with invalid inputs for this kata.
+
  4. Allow the Add method to handle a different delimiter:
  a. To change the delimiter, the beginning of the string will contain a separate line that looks like
  this: “//[delimiter]\n[numbers]”
@@ -50,4 +39,19 @@ describe('String calculator add() method', function () {
  7. Delimiters can be of any length, using this syntax: “//[***]\n1***2***3” returns 6.
  8. Allow multiple delimiters, using this syntax: “//[*][%]\n1*2%3” returns 6.
  9. Handle multiple delimiters of any length.
+
+ //DONE
+ 1. Create a String calculator with a method int Add(string numbers)
+ a. The method can take 0, 1, or 2 numbers and will return their sum.
+ b. An empty string will return 0.
+ c. Example inputs: “”, “1”, or “1,2”
+ d. Start with the simplest test case of an empty string. Then 1 number. Then 2 numbers.
+ e. Remember to solve things as simply as possible, forcing yourself to write tests for things you
+ didn’t think about.
+ f. Remember to refactor after each passing test.
+ 2. Allow the Add method to handle an unknown number of arguments/numbers.
+ 3. Allow the Add method to handle new lines between numbers (instead of commas).
+ a. Example: “1\n2,3” should return 6.
+ b. Example: “1,\n” is invalid, but you don’t need a test for this case.
+ c. Only test correct inputs – there is no need to deal with invalid inputs for this kata.
  */
