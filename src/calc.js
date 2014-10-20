@@ -20,7 +20,6 @@ var calc = {
             if (array[i] <= 1000) {
                 res += parseInt(array[i])
             }
-
         }
         return res
     },
@@ -37,6 +36,14 @@ var calc = {
         var aux = delim
         if (delim.indexOf('[') >= 0 && delim.indexOf(']') > 2) {
             aux = delim.substring(0, delim.length - 1).substring(1)
+        }
+        if (delim.indexOf('][') >= 0) {
+            aux = delim.substring(0, delim.length - 1).substring(1).split('][')
+            for (var i = 0; i < aux.length; i++) {
+                while (array.indexOf(aux[i]) > 0) {
+                    array = array.replace(aux[i], '][')
+                }
+            }
         }
         while (array.indexOf(aux) > 0) {
             array = array.replace(aux, '][')
