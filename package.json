@@ -16,4 +16,7 @@
         "url": "https://github.com/NeLk42/string-calculator-kata-V/issues"
     },
     "homepage": "https://github.com/NeLk42/string-calculator-kata-V"
+    "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
 }
