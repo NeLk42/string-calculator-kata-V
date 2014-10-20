@@ -1,0 +1,19 @@
+{
+    "name": "string-calculator-kata-V",
+    "version": "1.0.0",
+    "description": "string-calculator-kata-V ========================= #TDD Kata [![Build Status](https://travis-ci.org/NeLk42/string-calculator-kata-V.svg?branch=master)](https://travis-ci.org/NeLk42/string-calculator-kata-V)",
+    "main": "src/calc.js",
+    "scripts": {
+        "test": "jasmine-node test/calc-spec.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NeLk42/string-calculator-kata-V.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NeLk42/string-calculator-kata-V/issues"
+    },
+    "homepage": "https://github.com/NeLk42/string-calculator-kata-V"
+}
