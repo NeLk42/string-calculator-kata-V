@@ -13,8 +13,12 @@ describe('String calculator add() method', function () {
         expect(calc.add('1')).toBe(1)
     })
 
-    it('should return 3 if string is 1,2', function () {
+    it('should return 6 if string is 1,2,3', function () {
         expect(calc.add('1,2,3')).toBe(6)
+    })
+
+    it('should return 10 if string is 1,2\n3,4', function () {
+        expect(calc.add('1,2\n3,4')).toBe(10)
     })
 })
 
