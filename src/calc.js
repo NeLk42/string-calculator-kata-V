@@ -32,21 +32,26 @@ var calc = {
         var array = res.split('\n')
         return array[1]
     },
-    getDelimArray: function (res, delim) {
+    getNumsArrayWithDelim: function (res, delim) {
         var array = res
-        while (array.indexOf(delim) > 0) {
-            array = array.replace(delim, '][')
+        var aux = delim
+        if (delim.indexOf('[') >= 0 && delim.indexOf(']') > 2) {
+            aux = delim.substring(0, delim.length - 1).substring(1)
+        }
+        while (array.indexOf(aux) > 0) {
+            array = array.replace(aux, '][')
         }
         return array.split('][')
     },
     add: function (text) {
         var res = text ? text : 0;
+        var array
         if (res != 0) {
-            if (res.indexOf('//')) {
-                var array = this.getNumsArray(res)
+            if (res.indexOf('//') < 0) {
+                array = this.getNumsArray(res)
                 res = this.calculateSum(array);
             } else {
-                var array = this.getDelimArray(this.getText(res), this.getDelim(res))
+                array = this.getNumsArrayWithDelim(this.getText(res), this.getDelim(res))
                 res = this.calculateSum(array);
             }
         }

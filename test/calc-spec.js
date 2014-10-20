@@ -34,6 +34,10 @@ describe('String calculator add() method', function () {
     it('should return 720 if string is 1080,720', function () {
         expect(calc.add('1080,720')).toBe(720)
     })
+
+    it('should return 6 if string is //[***]\n1***2***3', function () {
+        expect(calc.add('//[***]\n1***2***3')).toBe(6)
+    })
 })
 
 /*
